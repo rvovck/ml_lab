@@ -9,3 +9,7 @@ Test accuracy: 0.9257425665855408
 CoordAtt + LSTM (old dataset)
 Test loss: 0.314109742641449
 Test accuracy: 0.9200848937034607
+
+LSTM (old dataset)
+Test loss: 0.2461519092321396
+Test accuracy: 0.9285714030265808
