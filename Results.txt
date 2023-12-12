@@ -1,0 +1,11 @@
+Normal (old dataset)
+Test loss: 0.37969982624053955
+Test accuracy: 0.9165487885475159
+
+CoordAtt (old dataset)
+Test loss: 0.2522450089454651
+Test accuracy: 0.9257425665855408
+
+CoordAtt + LSTM (old dataset)
+Test loss: 0.314109742641449
+Test accuracy: 0.9200848937034607

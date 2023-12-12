@@ -1,0 +1,28 @@
+from tensorflow.keras.utils import image_dataset_from_directory
+
+train_batches, valid_batches = tf.keras.utils.image_dataset_from_directory(
+    DATASET_PATH,
+    labels='inferred',
+    label_mode='categorical',
+    class_names=None,
+    color_mode='rgb',
+    batch_size=BATCH_SIZE,
+    image_size=IMAGE_SIZE,
+    shuffle=True,
+    seed=42,
+    validation_split=0.2,
+    subset="both",
+    interpolation='bilinear',
+    follow_links=False,
+    crop_to_aspect_ratio=False
+)
+
+data_augmentation = tf.keras.Sequential(
+    [
+        layers.Rescaling(scale=1./255),
+        layers.RandomFlip(seed=SEED),
+        layers.RandomRotation(0.5, fill_mode="constant", seed=SEED),
+        layers.RandomZoom(0.1, fill_mode="constant", seed=SEED),
+        layers.RandomTranslation(height_factor=0.2, width_factor=0.2, fill_mode="constant", seed=SEED)
+    ]
+)
